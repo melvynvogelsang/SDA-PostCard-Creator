@@ -36,4 +36,6 @@ public class Adresse {
     public void setLocalite(String localite) {
         this.localite = localite;
     }
+
+
 }
