@@ -2,26 +2,37 @@ package ch.hegarc.ig.sda.business;
 
 import java.rmi.server.UID;
 
-public class Utilisateur {
-    private String prenom;
+public class Utilisateur extends Participant {
+    private String id;
     private String nom;
     private String email;
-    private Adresse adresse;
+    private Conversation conversation;
 
     /** Constructeur */
-    public Utilisateur(String prenom, String nom, String email, Adresse adresse) {
-        this.prenom = prenom;
-        this.nom = nom;
-        this.email = email;
-        this.adresse = adresse;
-    }
-    /** Getters et setters */
-    public String getPrenom() {
-        return prenom;
+
+    public Utilisateur(String p_id,String p_prenom, String p_nom, String p_email) {
+        super(p_prenom);
+        this.id = p_id;
+        this.nom = p_nom;
+        this.email = p_email;
+        this.conversation = new Conversation();
     }
 
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
+
+    public Conversation getConversation() {
+        return conversation;
+    }
+
+    public void setConversation(Conversation p_conversation) {
+        conversation = p_conversation;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNom() {
@@ -38,13 +49,5 @@ public class Utilisateur {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public Adresse getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(Adresse adresse) {
-        this.adresse = adresse;
     }
 }

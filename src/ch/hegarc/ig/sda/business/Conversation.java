@@ -1,44 +1,77 @@
 package ch.hegarc.ig.sda.business;
 
+import jdk.jshell.execution.Util;
+
+import java.io.*;
 import java.time.LocalDateTime;
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.*;
 
 public class Conversation {
     private Deque<Message> messages;
-    private Utilisateur utilisateur;
-    private Bot bot;
+    private Participant utilisateur;
+    private Participant bot;
 
-    public Conversation(Utilisateur utilisateur, Bot bot) {
+    public Conversation() {
         // On crée la liste de messages
-        this.messages = new LinkedList<Message>();
-        this.utilisateur = utilisateur;
-        this.bot = bot;
+        this.messages = new LinkedList<>();
     }
 
-    public void addMessage(String message, LocalDateTime date, Utilisateur envoyeur){
+    public void addMessage(String texte, LocalDateTime date, Participant envoyeur){
         // On crée le nouveau message
-        Message newMessage = new Message(message,date,envoyeur);
+        Message newMessage = new Message(texte,date,envoyeur);
         // On ajoute le message à la liste des messages
-        messages.addFirst(newMessage);
-        System.out.println("Message ajouté dans la liste des messages");
+        messages.addLast(newMessage);
+        // Retourne le message
+        // newMessage.afficherMessage();
     }
+
+
+
+    public void afficherConversation(){
+        Iterator<Message> iterateur = messages.iterator();
+        System.out.println();
+        System.out.println("Début de la conversation ...");
+        System.out.println();
+        for (Message msg : messages){
+            if (msg.getEnvoyeur() instanceof Bot){
+                System.out.println();
+                System.out.println(msg.getTexte());
+                System.out.println(msg.getDate());
+            }else{
+                System.out.println();
+                System.out.println("\t\t\t"+msg.getTexte());
+                System.out.println("\t\t\t"+msg.getDate());
+            }
+        }
+        System.out.println();
+        System.out.println("Fin de la conversation ...");
+        System.out.println();
+    }
+
+
 
     public Deque<Message> getMessages(){
         return this.messages;
     }
 
-    /** Class message interne */
         private class Message {
             private String texte;
             private LocalDateTime date;
-            private Utilisateur envoyeur;
+            private Participant envoyeur;
 
             /** Constructeur */
-            public Message(String texte, LocalDateTime date, Utilisateur envoyeur) {
+            public Message(String texte, LocalDateTime date, Participant envoyeur) {
                 this.texte = texte;
                 this.date = date;
                 this.envoyeur = envoyeur;
+            }
+
+            public void afficherMessage(){
+                if(envoyeur instanceof Utilisateur){
+                    System.out.println("\t\t\t" + texte);
+                } else if (envoyeur instanceof Bot){
+                    System.out.println(texte);
+                }
             }
 
             public String getTexte() {
@@ -57,13 +90,14 @@ public class Conversation {
                 this.date = date;
             }
 
-            public Utilisateur getEnvoyeur() {
+            public Participant getEnvoyeur() {
                 return envoyeur;
             }
 
-            public void setEnvoyeur(Utilisateur envoyeur) {
+            public void setEnvoyeur(Participant envoyeur) {
                 this.envoyeur = envoyeur;
             }
+
 
         @Override
         public String toString() {

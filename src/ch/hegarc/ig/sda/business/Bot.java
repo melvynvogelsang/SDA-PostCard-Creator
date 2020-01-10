@@ -1,18 +1,16 @@
 package ch.hegarc.ig.sda.business;
 
-public class Bot {
-    private String nom;
-
+public class Bot extends Participant{
     /** Constructeur */
-    public Bot(String nom) {
-        this.nom = nom;
+    public Bot(String p_prenom) {
+        super(p_prenom);
     }
     /** Getters et setters */
-    public String getNom() {
-        return nom;
+    public String getPrenom() {
+        return this.prenom;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setPrenom(String p_prenom) {
+        super.prenom = p_prenom;
     }
 }
