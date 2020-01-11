@@ -14,8 +14,8 @@ public class Data {
     public Data() {
     }
 
-    public void loadUsers(List<Utilisateur> utilisateurs){
-        String csvFile = "C:/Users/melvyn.vogelsan/Desktop/data/data_users.csv";
+    public void loadUsers(List<Utilisateur> utilisateurs    ){
+        String csvFile = "data/data_users.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
@@ -31,8 +31,6 @@ public class Data {
                     String[] splittedLine = line.split(cvsSplitBy);
                     Participant utilisateur = new Utilisateur(splittedLine[0],splittedLine[1],splittedLine[2],splittedLine[3]);
                     utilisateurs.add((Utilisateur) utilisateur);
-                    if(i==1000)
-                        break;
                 }
 
                 i++;
@@ -57,8 +55,18 @@ public class Data {
         System.out.println(utilisateurs.size() + " utilisateurs ajoutés.");
 
     }
+
+    public void loadMessagesSingleUser(Utilisateur user,Bot bot){
+        LocalDateTime dateAAjouter = LocalDateTime.now();
+        for(int i = 0; i < 500000; i++){
+            user.getConversation().addMessage("Question posée", dateAAjouter, user);
+            user.getConversation().addMessage("Réponse du bot", dateAAjouter, bot);
+
+        }
+    }
+
     public void loadMessages(List<Utilisateur> utilisateurs, Bot bot){
-        String csvFile = "C:/Users/melvyn.vogelsan/Desktop/data/data_messages.csv";
+        String csvFile = "data/data_messages.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
@@ -78,14 +86,10 @@ public class Data {
                         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                         LocalDateTime newDate = LocalDateTime.parse(splittedLine[1], formatter);
                         user.getConversation().addMessage(splittedLine[0],newDate,user);
-                        user.getConversation().addMessage("Votre colis se trouve à Colombier", newDate,bot);
+                        user.getConversation().addMessage("Réponse du bot", newDate,bot);
                     }
-
-                    if(i==1000)
-                        break;
                 }
-
-                i++;
+                    i++;
             }
 
         } catch (FileNotFoundException e) {
@@ -104,7 +108,7 @@ public class Data {
             }
         }
 
-        System.out.println("Messages ajoutés dans les conversations.");
+        System.out.println("20000 messages ajoutés.");
 
     }
 }
