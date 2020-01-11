@@ -8,7 +8,6 @@ public abstract class Participant {
         this.prenom = prenom;
     }
 
-
     public String getPrenom() {
         return prenom;
     }

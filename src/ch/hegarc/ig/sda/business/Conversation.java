@@ -59,7 +59,6 @@ public class Conversation {
             private LocalDateTime date;
             private Participant envoyeur;
 
-            /** Constructeur */
             public Message(String texte, LocalDateTime date, Participant envoyeur) {
                 this.texte = texte;
                 this.date = date;

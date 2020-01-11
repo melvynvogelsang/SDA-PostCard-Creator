@@ -1,20 +1,20 @@
 package ch.hegarc.ig.sda.business;
 
-import jdk.jshell.execution.Util;
+import ch.hegarc.ig.sda.datastructure.Set;
 
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.LinkedList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-public class Loader {
+public class LoaderHashSet {
+    public LoaderHashSet() {
 
-    public Loader() {
     }
 
-    public void loadUsers(List<Utilisateur> utilisateurs    ){
+    public void loadUsers(Set<Utilisateur> utilisateurs){
         String csvFile = "data/data_users.csv";
         BufferedReader br = null;
         String line = "";
@@ -66,7 +66,7 @@ public class Loader {
         }
     }
 
-    public void loadMessages(List<Utilisateur> utilisateurs, Bot bot){
+    public void loadMessages(Set<Utilisateur>  utilisateurs, Bot bot){
         String csvFile = "data/data_messages.csv";
         BufferedReader br = null;
         String line = "";
@@ -90,7 +90,7 @@ public class Loader {
                         user.getConversation().addMessage("Réponse du bot", newDate,bot);
                     }
                 }
-                    i++;
+                i++;
             }
 
         } catch (FileNotFoundException e) {
