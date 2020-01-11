@@ -1,6 +1,7 @@
 package ch.hegarc.ig.sda.business;
 
 import java.rmi.server.UID;
+import java.util.Objects;
 
 public class Utilisateur extends Participant {
     private String id;
@@ -50,4 +51,5 @@ public class Utilisateur extends Participant {
     public void setEmail(String email) {
         this.email = email;
     }
+
 }

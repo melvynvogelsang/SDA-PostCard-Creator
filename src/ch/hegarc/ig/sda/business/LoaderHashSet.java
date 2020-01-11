@@ -1,13 +1,14 @@
 package ch.hegarc.ig.sda.business;
 
-import ch.hegarc.ig.sda.datastructure.Set;
+
+
 
 import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
+import java.util.Iterator;
+import java.util.Set;
 
 public class LoaderHashSet {
     public LoaderHashSet() {
@@ -52,30 +53,33 @@ public class LoaderHashSet {
             }
         }
 
-        System.out.println(utilisateurs.size() + " utilisateurs ajoutés.");
 
     }
 
-    public void loadMessagesSingleUser(Utilisateur user,Bot bot){
+    public void loadMessagesSingleUser(HashSet<Utilisateur> utilisateurs, Utilisateur user,Bot bot,int nbMessages){
         LocalDateTime dateAAjouter = LocalDateTime.now();
-
-        for(int i = 0; i < 10000; i++){
-            user.getConversation().addMessage("Quelles sont vos heures d'ouverture ?", dateAAjouter, user);
-            user.getConversation().addMessage("Nous sommes ouvert de 8h00 à 12h00 et de 13h00 à 18h00", dateAAjouter, bot);
-
+        for (Utilisateur utilisateur : utilisateurs){
+            if (utilisateur.getId() == user.getId()) {
+                for(int i = 0; i < nbMessages; i++){
+                    user.getConversation().addMessage("Quelles sont vos heures d'ouverture ?", dateAAjouter, utilisateur);
+                    user.getConversation().addMessage("Nous sommes ouvert de 8h00 à 12h00 et de 13h00 à 18h00", dateAAjouter, bot);
+                }
+            }
         }
+
     }
 
-    public void loadMessages(Set<Utilisateur>  utilisateurs, Bot bot){
+    public void loadMessages(Set<Utilisateur> utilisateurs, Bot bot){
         String csvFile = "data/data_messages.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
 
+
+
         try {
 
             br = new BufferedReader(new InputStreamReader(new FileInputStream(csvFile), "UTF-8"));
-
             int i= 0;
             while ((line = br.readLine()) != null) {
 
@@ -83,12 +87,15 @@ public class LoaderHashSet {
                     String[] splittedLine = line.split(cvsSplitBy);
 
                     // On remplit la conversation de chaque utilisateur
-                    for (Utilisateur user : utilisateurs){
+
                         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                         LocalDateTime newDate = LocalDateTime.parse(splittedLine[1], formatter);
-                        user.getConversation().addMessage(splittedLine[0],newDate,user);
-                        user.getConversation().addMessage("Réponse du bot", newDate,bot);
+                        for (Utilisateur utilisateur : utilisateurs ){
+                            utilisateur.getConversation().addMessage(splittedLine[0],newDate,utilisateur);
+                            utilisateur.getConversation().addMessage("Réponse du bot", newDate,bot);
                     }
+                    if(i==10)
+                        break;
                 }
                 i++;
             }
@@ -108,8 +115,6 @@ public class LoaderHashSet {
                 }
             }
         }
-
-        System.out.println("20000 messages ajoutés.");
 
     }
 }

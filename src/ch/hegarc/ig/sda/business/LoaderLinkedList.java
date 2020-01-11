@@ -48,14 +48,13 @@ public class LoaderLinkedList {
             }
         }
 
-        System.out.println(utilisateurs.size() + " utilisateurs ajoutés.");
 
     }
 
-    public void loadMessagesSingleUser(Utilisateur user,Bot bot){
+    public void loadMessagesSingleUser(Utilisateur user,Bot bot,int nbMessages){
         LocalDateTime dateAAjouter = LocalDateTime.now();
 
-        for(int i = 0; i < 10000; i++){
+        for(int i = 0; i < nbMessages; i++){
             user.getConversation().addMessage("Quelles sont vos heures d'ouverture ?", dateAAjouter, user);
             user.getConversation().addMessage("Nous sommes ouvert de 8h00 à 12h00 et de 13h00 à 18h00", dateAAjouter, bot);
 
@@ -105,7 +104,6 @@ public class LoaderLinkedList {
             }
         }
 
-        System.out.println("20000 messages ajoutés.");
 
     }
 }
