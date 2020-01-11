@@ -9,9 +9,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
-public class Data {
+public class Loader {
 
-    public Data() {
+    public Loader() {
     }
 
     public void loadUsers(List<Utilisateur> utilisateurs    ){
@@ -58,9 +58,10 @@ public class Data {
 
     public void loadMessagesSingleUser(Utilisateur user,Bot bot){
         LocalDateTime dateAAjouter = LocalDateTime.now();
-        for(int i = 0; i < 500000; i++){
-            user.getConversation().addMessage("Question posée", dateAAjouter, user);
-            user.getConversation().addMessage("Réponse du bot", dateAAjouter, bot);
+
+        for(int i = 0; i < 10000; i++){
+            user.getConversation().addMessage("Quelles sont vos heures d'ouverture ?", dateAAjouter, user);
+            user.getConversation().addMessage("Nous sommes ouvert de 8h00 à 12h00 et de 13h00 à 18h00", dateAAjouter, bot);
 
         }
     }
