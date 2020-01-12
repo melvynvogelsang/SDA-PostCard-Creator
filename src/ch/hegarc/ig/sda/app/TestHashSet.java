@@ -1,10 +1,11 @@
 package ch.hegarc.ig.sda.app;
 
 import ch.hegarc.ig.sda.business.*;
+import ch.hegarc.ig.sda.loader.AbstractLoader;
+import ch.hegarc.ig.sda.loader.LoaderHashSet;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
 
 
@@ -19,7 +20,7 @@ public class TestHashSet {
 
         Bot bot = new Bot("Pascal le Bot");
         LocalDateTime dateAAjouter = LocalDateTime.now();
-        LoaderHashSet loader = new LoaderHashSet();
+        AbstractLoader loader = new LoaderHashSet();
 
         // Temps de chargement des users
         long startTimeUsers = System.currentTimeMillis();
@@ -62,22 +63,10 @@ public class TestHashSet {
         long endTimeAjout10kMessages = System.currentTimeMillis();
         long elapsedTimeAjout10kMessages = endTimeAjout10kMessages - startTimeAjout10kMessages;
 
-        //Temps d'accès à la conversation d'un seul user
-        long startTimeAffichageConversation = System.currentTimeMillis();
-
-       /** for (Utilisateur user : utilisateurs){
-            if (utilisateur.equals(user)){
-                user.getConversation().afficherConversation();
-            }
-        }
-        */
-        long endTimeAffichageConversation = System.currentTimeMillis();
-        long elapsedTimeAffichageConversation = endTimeAffichageConversation - startTimeAffichageConversation;
-
         System.out.println();
-        System.out.println("----------------------------");
-        System.out.println("--- Données dans HashSet ---");
-        System.out.println("----------------------------");
+        System.out.println("-----------------------------");
+        System.out.println("---------- HashSet ----------");
+        System.out.println("-----------------------------");
         System.out.println();
         System.out.println("Temps de chargement depuis CSV : " + (utilisateurs.size() - 1) + " utilisateurs : " + elapsedTimeUsers + "ms");
         System.out.println("Temps de chargement de 600000 messages depuis CSV : " + elapsedTimeMessages + "ms");
@@ -89,9 +78,19 @@ public class TestHashSet {
         for (Utilisateur user : utilisateurs){
             if (utilisateurAAjouter.equals(user)){
                 System.out.println("Temps d'ajout de " + (user.getConversation().getMessages().size() - 21 ) + " messages : " + elapsedTimeAjout10kMessages + "ms"); // - 21 car 21 messages ont été chargés dans le programme
-                ;
+                System.out.println("Taille de la liste de message de " + user.getPrenom() + " après les opérations : " + user.getConversation().getMessages().size());
             }
         }
-       // System.out.println("Temps d'affichage de la discussion d'un user : " + elapsedTimeAffichageConversation + "ms");
+
+        // Temps de l'affichage d'une conversation
+        long startTimeAffichageConversation = System.currentTimeMillis();;
+        for (Utilisateur user : utilisateurs){
+            if (user.getId().equals("150000")){
+                user.getConversation().afficherConversation();
+            }
+        }
+        long endTimeAffichageConversation  = System.currentTimeMillis();
+        long elapsedTimeAffichageConversation  = endTimeAffichageConversation  - startTimeAffichageConversation ;
+        System.out.println("Temps d'affichage de la conversation: " + elapsedTimeAffichageConversation + "ms");
     }
 }
