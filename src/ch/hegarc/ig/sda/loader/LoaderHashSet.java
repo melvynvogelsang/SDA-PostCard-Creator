@@ -1,19 +1,10 @@
 package ch.hegarc.ig.sda.loader;
 
-
-
-
 import ch.hegarc.ig.sda.business.Bot;
-import ch.hegarc.ig.sda.business.Participant;
 import ch.hegarc.ig.sda.business.Utilisateur;
-
-import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
 
 public class LoaderHashSet extends AbstractLoader {
     public LoaderHashSet() {

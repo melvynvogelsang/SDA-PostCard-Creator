@@ -5,11 +5,8 @@ import ch.hegarc.ig.sda.business.Participant;
 import ch.hegarc.ig.sda.business.Utilisateur;
 
 import java.io.*;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+
 import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
 
 public abstract class AbstractLoader {
 

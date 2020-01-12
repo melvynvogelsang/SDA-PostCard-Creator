@@ -1,14 +1,10 @@
 package ch.hegarc.ig.sda.loader;
 
 import ch.hegarc.ig.sda.business.Bot;
-import ch.hegarc.ig.sda.business.Participant;
 import ch.hegarc.ig.sda.business.Utilisateur;
-
-import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Collection;
-import java.util.List;
 
 public class LoaderLinkedList extends AbstractLoader {
 
