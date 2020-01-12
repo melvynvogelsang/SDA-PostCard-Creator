@@ -12,7 +12,6 @@ public abstract class AbstractTest implements Test{
     static final int NB_MESSAGES_AJOUTES = 21;
     static final int NB_UTILISATEUR_AJOUTES = 1;
 
-
     @Override
     public void run() {
         Participant utilisateurAAjouter = new Utilisateur("300001","Melvyn","Vogelsang","melvyn.vogelsang@he-arc.ch");
@@ -21,13 +20,13 @@ public abstract class AbstractTest implements Test{
 
         doCreateUtilisateurs();
 
-        // Temps de chargement des users
+        // Temps de chargement des utilisateurs
         long startTimeUsers = System.currentTimeMillis();
         doLoadUtilisateurs();
         long endTimeUsers = System.currentTimeMillis();
         long elapsedTimeUsers = endTimeUsers - startTimeUsers;
 
-        // Temps de chargement d'un ajout d'un user
+        // Temps de chargement d'un ajout d'un seul utilisateur
         long startTimeAjoutUser = System.currentTimeMillis();
         doAddUtilisateur((Utilisateur) utilisateurAAjouter);
         long endTimeAjoutUser = System.currentTimeMillis();
@@ -39,7 +38,7 @@ public abstract class AbstractTest implements Test{
         long endTimeMessages = System.currentTimeMillis();
         long elapsedTimeMessages = endTimeMessages - startTimeMessages;
 
-        // Temps de chargement d'un ajout de message
+        // Temps de chargement d'un ajout d'un seul message
         long startTimeAjoutMessage = System.currentTimeMillis();
         doAddMessage((Utilisateur) utilisateurAAjouter,newDate);
         long endTimeAjoutMessage = System.currentTimeMillis();
@@ -62,25 +61,26 @@ public abstract class AbstractTest implements Test{
         doTestempsAjoutNMessages((Utilisateur) utilisateurAAjouter, elapsedTimeAjoutNMessages);
         doAffichageNbUtilisateursFinaux();
         doTestTailleListeUtilisateur((Utilisateur) utilisateurAAjouter);
-        // Temps d'ajout de n messages
+
+        // Temps d'affichage d'une conversation
         long startTimeAfficherConversation = System.currentTimeMillis();
-        doAfficherConversation();
+        doAfficherConversation("150000");
         long endTimeAfficherConversation = System.currentTimeMillis();
         long elapsedTimeAfficherConversation = endTimeAfficherConversation - startTimeAfficherConversation;
         doTestTempsAfficherConversation(elapsedTimeAfficherConversation);
 
     }
 
-    abstract void doCreateUtilisateurs();
-    abstract void doLoadUtilisateurs();
-    abstract void doAddUtilisateur(Utilisateur utilisateurAAjouter);
-    abstract void doLoadMessages(Bot bot);
-    abstract void doAddMessage(Utilisateur utilisateur, LocalDateTime dateAAjouter);
-    abstract void doLoadMessagesSingleUser(Utilisateur utilisateur,Bot bot);
-    abstract void doTestTempsChargementUsersCSV(long elapsedTimeUsers);
-    abstract void doAffichageNbUtilisateursFinaux();
-    abstract void doTestTailleListeUtilisateur(Utilisateur utilisateur);
-    abstract void doTestempsAjoutNMessages(Utilisateur utilisateur, long elapsedTimeAjoutNMessages);
-    abstract void doAfficherConversation();
-    abstract void doTestTempsAfficherConversation(long elapsedTimeAffichageConversation);
+    protected abstract void doCreateUtilisateurs();
+    protected abstract void doLoadUtilisateurs();
+    protected abstract void doAddUtilisateur(Utilisateur utilisateurAAjouter);
+    protected abstract void doLoadMessages(Bot bot);
+    protected abstract void doAddMessage(Utilisateur utilisateur, LocalDateTime dateAAjouter);
+    protected abstract void doLoadMessagesSingleUser(Utilisateur utilisateur,Bot bot);
+    protected abstract void doTestTempsChargementUsersCSV(long elapsedTimeUsers);
+    protected abstract void doAffichageNbUtilisateursFinaux();
+    protected abstract void doTestTailleListeUtilisateur(Utilisateur utilisateur);
+    protected abstract void doTestempsAjoutNMessages(Utilisateur utilisateur, long elapsedTimeAjoutNMessages);
+    protected abstract void doAfficherConversation(String id);
+    protected abstract void doTestTempsAfficherConversation(long elapsedTimeAffichageConversation);
 }

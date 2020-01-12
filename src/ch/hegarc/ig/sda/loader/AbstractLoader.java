@@ -10,7 +10,6 @@ import java.util.Collection;
 
 public abstract class AbstractLoader {
 
-
     public void loadUsers(Collection<Utilisateur> utilisateurs){
         String csvFile = "data/data_users.csv";
         BufferedReader br = null;

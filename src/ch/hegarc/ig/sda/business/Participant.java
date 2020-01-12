@@ -1,8 +1,8 @@
 package ch.hegarc.ig.sda.business;
 
 public abstract class Participant {
-    protected String prenom;
 
+    private String prenom;
 
     public Participant(String prenom) {
         this.prenom = prenom;

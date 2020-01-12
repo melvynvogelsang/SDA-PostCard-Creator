@@ -18,81 +18,83 @@ public class TestHashSet extends AbstractTest {
 
     }
 
+    public Utilisateur get(Utilisateur utilisateur){
+    Utilisateur tmpUtilisateur = null;
+    for (Utilisateur user : utilisateurs){
+        if (user.equals(utilisateur)){
+        tmpUtilisateur = user;
+        }
+    }
+        return tmpUtilisateur;
+    }
+
+    public Utilisateur get(String id){
+        Utilisateur tmpUtilisateur = null;
+        for (Utilisateur user : utilisateurs){
+            if (user.getId().equals(id)){
+                tmpUtilisateur = user;
+            }
+        }
+        return tmpUtilisateur;
+        }
+
     @Override
-    void doCreateUtilisateurs() {
+    protected void doCreateUtilisateurs() {
         this.utilisateurs = new HashSet<>();
     }
 
     @Override
-    void doLoadUtilisateurs() {
+    protected void doLoadUtilisateurs() {
         loader.loadUsers(utilisateurs);
     }
 
     @Override
-    void doAddUtilisateur(Utilisateur utilisateurAAjouter) {
-        utilisateurs.add((Utilisateur) utilisateurAAjouter);
+    protected void doAddUtilisateur(Utilisateur utilisateurAAjouter) {
+        utilisateurs.add(utilisateurAAjouter);
     }
 
     @Override
-    void doLoadMessages(Bot bot) {
+    protected void doLoadMessages(Bot bot) {
         loader.loadMessages(utilisateurs, bot);
     }
 
     @Override
-    void doAddMessage(Utilisateur utilisateurAAjouter, LocalDateTime dateAAjouter) {
-        for (Utilisateur user : utilisateurs){
-            if (user.equals(utilisateurAAjouter)){
-                user.getConversation().addMessage("Message ajouté par le programme.", dateAAjouter, utilisateurAAjouter);
-            }
-        }
+    protected void doAddMessage(Utilisateur utilisateur, LocalDateTime dateAAjouter) {
+        get(utilisateur).getConversation().addMessage("Message ajouté par le programme.", dateAAjouter, utilisateur);
     }
 
     @Override
-    void doLoadMessagesSingleUser(Utilisateur utilisateurAAjouter, Bot bot) {
-        loader.loadMessagesSingleUser((HashSet<Utilisateur>) utilisateurs,(Utilisateur) utilisateurAAjouter, bot,350000);
+    protected void doLoadMessagesSingleUser(Utilisateur utilisateur, Bot bot) {
+        loader.loadMessagesSingleUser(utilisateurs,utilisateur, bot,350000);
     }
 
     @Override
-    void doTestTempsChargementUsersCSV(long elapsedTimeUsers) {
+    protected void doTestTempsChargementUsersCSV(long elapsedTimeUsers) {
         System.out.println("Temps de chargement depuis CSV : " + (utilisateurs.size() - NB_UTILISATEUR_AJOUTES) + " utilisateurs : " + elapsedTimeUsers + "ms");
-
     }
 
     @Override
-    void doAffichageNbUtilisateursFinaux() {
+    protected void doAffichageNbUtilisateursFinaux() {
         System.out.println("Nombre d'utilisateurs final : " + utilisateurs.size());
     }
 
     @Override
-    void doTestempsAjoutNMessages(Utilisateur utilisateurAAjouter, long elapsedTimeAjoutNMessages) {
-        for (Utilisateur user : utilisateurs){
-            if (utilisateurAAjouter.equals(user)){
-                System.out.println("Temps d'ajout de " + (user.getConversation().getMessages().size() - NB_MESSAGES_AJOUTES ) + " messages : " + elapsedTimeAjoutNMessages + "ms");
-            }
-        }
+    protected void doTestempsAjoutNMessages(Utilisateur utilisateur, long elapsedTimeAjoutNMessages) {
+        System.out.println("Temps d'ajout de " + (get(utilisateur).getConversation().getMessages().size() - NB_MESSAGES_AJOUTES ) + " messages : " + elapsedTimeAjoutNMessages + "ms");
     }
 
     @Override
-    void doTestTempsAfficherConversation(long elapsedTimeAffichageConversation) {
+    protected void doTestTempsAfficherConversation(long elapsedTimeAffichageConversation) {
         System.out.println("Temps d'affichage de la conversation: " + elapsedTimeAffichageConversation + "ms");
-
     }
 
     @Override
-    void doAfficherConversation() {
-        for (Utilisateur user : utilisateurs){
-            if(user.getId().equals("150000")){
-                user.getConversation().afficherConversation();
-            }
-        }
+    protected void doAfficherConversation(String id) {
+        get(id).getConversation().afficherConversation();
     }
 
     @Override
-    void doTestTailleListeUtilisateur (Utilisateur utilisateurAAjouter) {
-        for (Utilisateur user : utilisateurs){
-            if (utilisateurAAjouter.equals(user)){
-                System.out.println("Taille de la liste de message de " + user.getPrenom() + " après les opérations : " + user.getConversation().getMessages().size());
-            }
-        }
+    protected void doTestTailleListeUtilisateur (Utilisateur utilisateur) {
+        System.out.println("Taille de la liste de message de " + get(utilisateur).getPrenom() + " après les opérations : " + get(utilisateur).getConversation().getMessages().size());
     }
 }

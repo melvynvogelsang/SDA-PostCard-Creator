@@ -17,12 +17,11 @@ public class LoaderLinkedList extends AbstractLoader {
     }
 
     @Override
-    protected void doLoadMessagesSingleUser(Collection<Utilisateur> utilisateurs, Utilisateur user, Bot bot, int nbMessages) {
+    protected void doLoadMessagesSingleUser(Collection<Utilisateur> utilisateurs, Utilisateur utilisateur, Bot bot, int nbMessages) {
         LocalDateTime dateAAjouter = LocalDateTime.now();
-
         for(int i = 0; i < nbMessages; i++){
-            user.getConversation().addMessage("Quelles sont vos heures d'ouverture ?", dateAAjouter, user);
-            user.getConversation().addMessage("Nous sommes ouvert de 8h00 à 12h00 et de 13h00 à 18h00", dateAAjouter, bot);
+            utilisateur.getConversation().addMessage("Quelles sont vos heures d'ouverture ?", dateAAjouter, utilisateur);
+            utilisateur.getConversation().addMessage("Nous sommes ouvert de 8h00 à 12h00 et de 13h00 à 18h00", dateAAjouter, bot);
         }
     }
 

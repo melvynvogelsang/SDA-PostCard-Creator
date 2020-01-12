@@ -18,82 +18,80 @@ public class TestLinkedList extends AbstractTest {
 
     }
 
-
+    public Utilisateur get(String id){
+        Utilisateur tmpUtilisateur = null;
+        for (Utilisateur user : utilisateurs){
+            if(user.getId().equals(id)){
+                tmpUtilisateur = user;
+            }
+        }
+        return tmpUtilisateur;
+    }
 
     @Override
-    void doCreateUtilisateurs() {
+    protected void doCreateUtilisateurs() {
         this.utilisateurs = new LinkedList<>();
     }
 
     @Override
-    void doLoadUtilisateurs() {
+    protected void doLoadUtilisateurs() {
         loader.loadUsers(utilisateurs);
-
     }
 
     @Override
-    void doTestTailleListeUtilisateur(Utilisateur utilisateurAAjouter) {
-        // On récupère l'index de l'utilisateur que l'on vient d'ajouter
+    protected void doTestTailleListeUtilisateur(Utilisateur utilisateurAAjouter) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         System.out.println("Taille de la liste de message de " + utilisateurs.get(indexUtilisateur).getPrenom() + " après les opérations : " + utilisateurs.get(indexUtilisateur).getConversation().getMessages().size());
 
     }
 
     @Override
-    void doTestempsAjoutNMessages(Utilisateur utilisateurAAjouter, long elapsedTimeAjoutNMessages) {
-        // On récupère l'index de l'utilisateur que l'on vient d'ajouter
+    protected void doTestempsAjoutNMessages(Utilisateur utilisateurAAjouter, long elapsedTimeAjoutNMessages) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         System.out.println("Temps d'ajout de " + (utilisateurs.get(indexUtilisateur).getConversation().getMessages().size() - NB_MESSAGES_AJOUTES )+ " messages : " + elapsedTimeAjoutNMessages + "ms"); // - 21 car 21 messages ont été chargés dans le programme
 
     }
 
     @Override
-    void doAddUtilisateur(Utilisateur utilisateurAAjouter) {
-        utilisateurs.add((Utilisateur) utilisateurAAjouter);
+    protected void doAddUtilisateur(Utilisateur utilisateurAAjouter) {
+        utilisateurs.add(utilisateurAAjouter);
     }
 
     @Override
-    void doLoadMessages(Bot bot) {
+    protected void doLoadMessages(Bot bot) {
         loader.loadMessages(utilisateurs,bot);
     }
 
     @Override
-    void doAddMessage(Utilisateur utilisateurAAjouter, LocalDateTime dateAAjouter) {
-        // On récupère l'index de l'utilisateur que l'on vient d'ajouter
+    protected void doAddMessage(Utilisateur utilisateurAAjouter, LocalDateTime dateAAjouter) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         utilisateurs.get(indexUtilisateur).getConversation().addMessage("Message ajouté par le programme.",dateAAjouter,utilisateurAAjouter);
     }
 
-
     @Override
-    void doLoadMessagesSingleUser(Utilisateur utilisateurAAjouter,Bot bot) {
+    protected void doLoadMessagesSingleUser(Utilisateur utilisateurAAjouter,Bot bot) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         loader.loadMessagesSingleUser(utilisateurs, utilisateurs.get(indexUtilisateur),bot,350000);
 
     }
 
     @Override
-    void doTestTempsChargementUsersCSV(long elapsedTimeUsers) {
+    protected void doTestTempsChargementUsersCSV(long elapsedTimeUsers) {
         System.out.println("Temps de chargement depuis CSV : " + (utilisateurs.size() - NB_UTILISATEUR_AJOUTES) + " utilisateurs : " + elapsedTimeUsers + "ms");
     }
 
     @Override
-    void doAffichageNbUtilisateursFinaux() {
+    protected void doAffichageNbUtilisateursFinaux() {
         System.out.println("Nombre d'utilisateurs final : " + utilisateurs.size());
-
     }
 
     @Override
-    void doAfficherConversation() {
-        for (Utilisateur user : utilisateurs){
-            if(user.getId().equals("150000")){
-                user.getConversation().afficherConversation();
-            }
-        }
+    protected void doAfficherConversation(String id) {
+        get(id).getConversation().afficherConversation();
     }
 
     @Override
-    void doTestTempsAfficherConversation(long elapsedTimeAffichageConversation) {
+    protected void doTestTempsAfficherConversation(long elapsedTimeAffichageConversation) {
         System.out.println("Temps d'affichage de la conversation: " + elapsedTimeAffichageConversation + "ms");
     }
 }

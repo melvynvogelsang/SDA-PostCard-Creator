@@ -1,12 +1,11 @@
 package ch.hegarc.ig.sda.business;
 
 public class Utilisateur extends Participant {
+
     private String id;
     private String nom;
     private String email;
     private Conversation conversation;
-
-    /** Constructeur */
 
     public Utilisateur(String p_id,String p_prenom, String p_nom, String p_email) {
         super(p_prenom);
@@ -15,7 +14,6 @@ public class Utilisateur extends Participant {
         this.email = p_email;
         this.conversation = new Conversation();
     }
-
 
     public Conversation getConversation() {
         return conversation;
