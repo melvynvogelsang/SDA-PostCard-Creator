@@ -1,16 +1,16 @@
 package ch.hegarc.ig.sda;
 
-import ch.hegarc.ig.sda.test.AbstractTest;
-import ch.hegarc.ig.sda.test.TestHashSet;
-import ch.hegarc.ig.sda.test.TestLinkedList;
+import ch.hegarc.ig.sda.app.AbstractPostTalk;
+import ch.hegarc.ig.sda.app.PostTalkHashSet;
+import ch.hegarc.ig.sda.app.PostTalkLinkedList;
 
 
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        AbstractTest testHashSet = new TestHashSet();
-        AbstractTest testLinkedList = new TestLinkedList();
+        AbstractPostTalk testHashSet = new PostTalkHashSet();
+        AbstractPostTalk testLinkedList = new PostTalkLinkedList();
         System.out.println();
         System.out.println("-----------------------------");
         System.out.println("---------- HashSet ----------");

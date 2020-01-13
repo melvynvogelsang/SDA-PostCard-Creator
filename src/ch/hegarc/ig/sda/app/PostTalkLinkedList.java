@@ -1,4 +1,4 @@
-package ch.hegarc.ig.sda.test;
+package ch.hegarc.ig.sda.app;
 
 import ch.hegarc.ig.sda.business.Bot;
 import ch.hegarc.ig.sda.loader.AbstractLoader;
@@ -9,12 +9,12 @@ import java.time.LocalDateTime;
 import java.util.LinkedList;
 import java.util.List;
 
-public class TestLinkedList extends AbstractTest {
+public class PostTalkLinkedList extends AbstractPostTalk {
 
     private List<Utilisateur> utilisateurs = null;
     private AbstractLoader loader = new LoaderLinkedList();
 
-    public TestLinkedList() {
+    public PostTalkLinkedList() {
 
     }
 
@@ -29,69 +29,79 @@ public class TestLinkedList extends AbstractTest {
     }
 
     @Override
-    protected void doCreateUtilisateurs() {
+    public void createUtilisateurs() {
         this.utilisateurs = new LinkedList<>();
     }
 
     @Override
-    protected void doLoadUtilisateurs() {
+    public void loadUtilisateurs() {
         loader.loadUsers(utilisateurs);
     }
 
     @Override
-    protected void doTestTailleListeUtilisateur(Utilisateur utilisateurAAjouter) {
+    public void testTailleListeUtilisateur(Utilisateur utilisateurAAjouter) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         System.out.println("Taille de la liste de message de " + utilisateurs.get(indexUtilisateur).getPrenom() + " après les opérations : " + utilisateurs.get(indexUtilisateur).getConversation().getMessages().size());
 
     }
 
     @Override
-    protected void doTestempsAjoutNMessages(Utilisateur utilisateurAAjouter, long elapsedTimeAjoutNMessages) {
+    public void testempsAjoutNMessages(Utilisateur utilisateurAAjouter, long elapsedTimeAjoutNMessages) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         System.out.println("Temps d'ajout de " + (utilisateurs.get(indexUtilisateur).getConversation().getMessages().size() - NB_MESSAGES_AJOUTES )+ " messages : " + elapsedTimeAjoutNMessages + "ms"); // - 21 car 21 messages ont été chargés dans le programme
 
     }
 
     @Override
-    protected void doAddUtilisateur(Utilisateur utilisateurAAjouter) {
+    public void addUtilisateur(Utilisateur utilisateurAAjouter) {
         utilisateurs.add(utilisateurAAjouter);
     }
 
     @Override
-    protected void doLoadMessages(Bot bot) {
+    public void removeUtilisateur(Utilisateur utilisateur) {
+        utilisateurs.remove(utilisateur);
+    }
+
+    @Override
+    public void testTempsRemoveUtilisateur(long elapsedTimeRemove) {
+        System.out.println("Temps de suppression d'un seul utilisateur : " + elapsedTimeRemove + "ms");
+    }
+
+    @Override
+    public void loadMessages(Bot bot) {
         loader.loadMessages(utilisateurs,bot);
     }
 
     @Override
-    protected void doAddMessage(Utilisateur utilisateurAAjouter, LocalDateTime dateAAjouter) {
+    public void addMessage(Utilisateur utilisateurAAjouter, LocalDateTime dateAAjouter) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         utilisateurs.get(indexUtilisateur).getConversation().addMessage("Message ajouté par le programme.",dateAAjouter,utilisateurAAjouter);
     }
 
     @Override
-    protected void doLoadMessagesSingleUser(Utilisateur utilisateurAAjouter,Bot bot) {
+    public void loadMessagesSingleUser(Utilisateur utilisateurAAjouter,Bot bot) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         loader.loadMessagesSingleUser(utilisateurs, utilisateurs.get(indexUtilisateur),bot,350000);
 
     }
 
     @Override
-    protected void doTestTempsChargementUsersCSV(long elapsedTimeUsers) {
+    public void testTempsChargementUsersCSV(long elapsedTimeUsers) {
         System.out.println("Temps de chargement depuis CSV : " + (utilisateurs.size() - NB_UTILISATEUR_AJOUTES) + " utilisateurs : " + elapsedTimeUsers + "ms");
     }
 
     @Override
-    protected void doAffichageNbUtilisateursFinaux() {
+    public void affichageNbUtilisateursFinaux() {
         System.out.println("Nombre d'utilisateurs final : " + utilisateurs.size());
     }
 
     @Override
-    protected void doAfficherConversation(String id) {
+    public void afficherConversation(String id) {
         get(id).getConversation().afficherConversation();
     }
 
     @Override
-    protected void doTestTempsAfficherConversation(long elapsedTimeAffichageConversation) {
+    public void testTempsAfficherConversation(long elapsedTimeAffichageConversation) {
         System.out.println("Temps d'affichage de la conversation: " + elapsedTimeAffichageConversation + "ms");
     }
 }
