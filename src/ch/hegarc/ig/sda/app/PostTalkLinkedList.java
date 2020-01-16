@@ -15,7 +15,6 @@ public class PostTalkLinkedList extends AbstractPostTalk {
     private AbstractLoader loader = new LoaderLinkedList();
 
     public PostTalkLinkedList() {
-
     }
 
     public Utilisateur get(String id){

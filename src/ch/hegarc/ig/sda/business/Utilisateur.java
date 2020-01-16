@@ -1,5 +1,7 @@
 package ch.hegarc.ig.sda.business;
 
+import java.util.Objects;
+
 public class Utilisateur extends Participant {
 
     private String id;
@@ -47,4 +49,19 @@ public class Utilisateur extends Participant {
         this.email = email;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Utilisateur)) return false;
+        Utilisateur that = (Utilisateur) o;
+        return getId().equals(that.getId()) &&
+                getNom().equals(that.getNom()) &&
+                getEmail().equals(that.getEmail()) &&
+                        getPrenom().equals(that.getPrenom());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getNom(), getEmail(),getPrenom());
+    }
 }

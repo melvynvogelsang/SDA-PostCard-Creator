@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="da2dadb3-f6ba-4252-b8b2-20390ba98d02" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/test/AbstractTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/AbstractPostTalk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalk.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/test/TestHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkHashSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/test/TestLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SDA-PostCard-Creator/META-INF/SDA-PostCard-Creator.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Utilisateur.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,43 +23,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/AbstractLoader.java">
+        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+            <state relative-caret-position="206">
+              <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#loadUsers#0;class#AbstractLoader#0" />
-                <element signature="method#loadMessagesSingleUser#0;class#AbstractLoader#0" />
-                <element signature="method#loadMessages#0;class#AbstractLoader#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/LoaderLinkedList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="125" selection-start-line="19" selection-start-column="125" selection-end-line="19" selection-end-column="125" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#LoaderLinkedList#0;class#LoaderLinkedList#0" />
-                <element signature="method#doLoadUsers#0;class#LoaderLinkedList#0" />
-                <element signature="method#doLoadMessagesSingleUser#0;class#LoaderLinkedList#0" />
-                <element signature="method#doLoadMessages#0;class#LoaderLinkedList#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/AbstractPostTalk.java">
+        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Utilisateur.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+            <state relative-caret-position="393">
+              <caret line="64" column="69" selection-start-line="64" selection-start-column="69" selection-end-line="64" selection-end-column="69" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#Utilisateur#0;class#Utilisateur#0" />
+                <element signature="e#971#972#0" expanded="true" />
+                <element signature="e#1005#1006#0" expanded="true" />
+                <element signature="e#1418#1419#0" expanded="true" />
+                <element signature="e#1484#1485#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,45 +53,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+            <state relative-caret-position="85">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalk.java">
+        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Conversation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="14" column="26" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="68">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkHashSet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="60" selection-start-line="60" selection-end-line="63" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#get#0;class#PostTalkHashSet#0" />
-                <element signature="method#get#1;class#PostTalkHashSet#0" />
-                <element signature="e#1036#1037#0" expanded="true" />
-                <element signature="e#1087#1088#0" expanded="true" />
-                <element signature="e#1142#1143#0" expanded="true" />
-                <element signature="e#1188#1189#0" expanded="true" />
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1325#1326#0" expanded="true" />
-                <element signature="e#1392#1393#0" expanded="true" />
-                <element signature="e#1418#1419#0" expanded="true" />
-                <element signature="e#1383#1384#0" expanded="true" />
-                <element signature="e#1437#1438#0" expanded="true" />
-                <element signature="e#2837#2838#0" expanded="true" />
-                <element signature="e#2901#2902#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,32 +74,61 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="101">
-              <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="68">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#TestLinkedList#0;class#TestLinkedList#0" />
-                <element signature="method#get#0;class#TestLinkedList#0" />
-                <element signature="method#doTestTailleListeUtilisateur#0;class#TestLinkedList#0" />
-                <element signature="method#doTestempsAjoutNMessages#0;class#TestLinkedList#0" />
-                <element signature="e#2049#2050#0" expanded="true" />
-                <element signature="e#2075#2076#0" expanded="true" />
-                <element signature="method#doAddMessage#0;class#TestLinkedList#0" />
-                <element signature="method#doLoadMessagesSingleUser#0;class#TestLinkedList#0" />
-                <element signature="method#doTestTempsChargementUsersCSV#0;class#TestLinkedList#0" />
-                <element signature="method#doAffichageNbUtilisateursFinaux#0;class#TestLinkedList#0" />
+                <element signature="method#PostTalkLinkedList#0;class#PostTalkLinkedList#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Utilisateur.java">
+        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkHashSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state relative-caret-position="578">
+              <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
               <folding>
-                <element signature="method#Utilisateur#0;class#Utilisateur#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#PostTalkHashSet#0;class#PostTalkHashSet#0" />
+                <element signature="method#get#0;class#PostTalkHashSet#0" />
+                <element signature="e#1263#1264#0" expanded="true" />
+                <element signature="e#1316#1317#0" expanded="true" />
+                <element signature="method#testTempsRemoveUtilisateur#0;class#PostTalkHashSet#0" />
+                <element signature="method#addMessage#0;class#PostTalkHashSet#0" />
+                <element signature="method#loadMessagesSingleUser#0;class#PostTalkHashSet#0" />
+                <element signature="method#testTempsChargementUsersCSV#0;class#PostTalkHashSet#0" />
+                <element signature="method#affichageNbUtilisateursFinaux#0;class#PostTalkHashSet#0" />
+                <element signature="method#testempsAjoutNMessages#0;class#PostTalkHashSet#0" />
+                <element signature="method#testTempsAfficherConversation#0;class#PostTalkHashSet#0" />
+                <element signature="method#testTailleListeUtilisateur#0;class#PostTalkHashSet#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/AbstractLoader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="95" column="32" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#loadMessagesSingleUser#0;class#AbstractLoader#0" />
+                <element signature="method#loadMessages#0;class#AbstractLoader#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/LoaderHashSet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,8 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Participant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="68">
+              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -160,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Bot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="85">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -211,6 +197,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -238,7 +225,6 @@
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/LoaderHashSet.java" />
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Conversation.java" />
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/LoaderLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Utilisateur.java" />
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/AbstractLoader.java" />
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Participant.java" />
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Bot.java" />
@@ -248,58 +234,59 @@
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/Main.java" />
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalk.java" />
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkHashSet.java" />
-        <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkLinkedList.java" />
         <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/AbstractPostTalk.java" />
+        <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Utilisateur.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-30" />
-    <option name="y" value="310" />
-    <option name="width" value="1940" />
-    <option name="height" value="1100" />
+    <option name="y" value="309" />
+    <option name="width" value="1941" />
+    <option name="height" value="1101" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="SDA-PostCard-Creator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDA-PostCard-Creator" type="462c0819:PsiDirectoryNode" />
+              <item name="SDA-Post-Talk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDA-Post-Talk" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SDA-PostCard-Creator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDA-PostCard-Creator" type="462c0819:PsiDirectoryNode" />
+              <item name="SDA-Post-Talk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDA-Post-Talk" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SDA-PostCard-Creator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDA-PostCard-Creator" type="462c0819:PsiDirectoryNode" />
+              <item name="SDA-Post-Talk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDA-Post-Talk" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sda" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SDA-PostCard-Creator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDA-PostCard-Creator" type="462c0819:PsiDirectoryNode" />
+              <item name="SDA-Post-Talk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDA-Post-Talk" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sda" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SDA-PostCard-Creator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDA-PostCard-Creator" type="462c0819:PsiDirectoryNode" />
+              <item name="SDA-Post-Talk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDA-Post-Talk" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sda" type="462c0819:PsiDirectoryNode" />
               <item name="business" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="SDA-PostCard-Creator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SDA-PostCard-Creator" type="462c0819:PsiDirectoryNode" />
+              <item name="SDA-Post-Talk" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SDA-Post-Talk" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="sda" type="462c0819:PsiDirectoryNode" />
               <item name="loader" type="462c0819:PsiDirectoryNode" />
@@ -308,7 +295,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,16 +360,23 @@
       <workItem from="1578848677422" duration="9476000" />
       <workItem from="1578861841295" duration="3908000" />
       <workItem from="1578907446448" duration="4454000" />
+      <workItem from="1578919669338" duration="1291000" />
+      <workItem from="1579010004958" duration="99000" />
+      <workItem from="1579018062140" duration="1109000" />
+      <workItem from="1579085103935" duration="2430000" />
+      <workItem from="1579096098312" duration="1023000" />
+      <workItem from="1579160808998" duration="933000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87785000" />
+    <option name="totallyTimeSpent" value="95731000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.375" visible="true" weight="0.16040269" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.375" visible="true" weight="0.1951417" />
       <window_info id="Structure" order="1" sideWeight="0.36666667" side_tool="true" weight="0.2932886" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -390,8 +384,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.6" side_tool="true" weight="0.21409395" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.09348442" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29745042" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.5239787" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.053285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -495,100 +489,45 @@
     <entry file="file://$USER_HOME$/AppData/Local/Temp/AbstractHashMap.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/ChainHashMap.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Temp/AbstractMap.java" />
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/LoaderHashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#LoaderHashSet#0;class#LoaderHashSet#0" />
-            <element signature="method#doLoadUsers#0;class#LoaderHashSet#0" />
-            <element signature="method#doLoadMessagesSingleUser#0;class#LoaderHashSet#0" />
-            <element signature="method#doLoadMessages#0;class#LoaderHashSet#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Conversation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addMessage#0;class#Conversation#0" />
-            <element signature="method#afficherConversation#0;class#Conversation#0" />
-            <element signature="class#Message#0;class#Conversation#0" />
-            <element signature="method#Message#0;class#Message#0;class#Conversation#0" />
-            <element signature="method#afficherMessage#0;class#Message#0;class#Conversation#0" />
-            <element signature="method#toString#0;class#Message#0;class#Conversation#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Participant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Bot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Utilisateur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-          <folding>
-            <element signature="method#Utilisateur#0;class#Utilisateur#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#TestLinkedList#0;class#TestLinkedList#0" />
-            <element signature="method#get#0;class#TestLinkedList#0" />
-            <element signature="method#doTestTailleListeUtilisateur#0;class#TestLinkedList#0" />
-            <element signature="method#doTestempsAjoutNMessages#0;class#TestLinkedList#0" />
-            <element signature="e#2049#2050#0" expanded="true" />
-            <element signature="e#2075#2076#0" expanded="true" />
-            <element signature="method#doAddMessage#0;class#TestLinkedList#0" />
-            <element signature="method#doLoadMessagesSingleUser#0;class#TestLinkedList#0" />
-            <element signature="method#doTestTempsChargementUsersCSV#0;class#TestLinkedList#0" />
-            <element signature="method#doAffichageNbUtilisateursFinaux#0;class#TestLinkedList#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="uml://JAVA/ch.hegarc.ig.sda">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>ch.hegarc.ig.sda</OriginalElement>
+          <nodes>
+            <node x="" y="">ch.hegarc.ig.sda.loader.LoaderHashSet</node>
+            <node x="" y="">ch.hegarc.ig.sda.Main</node>
+            <node x="" y="">ch.hegarc.ig.sda.business.Participant</node>
+            <node x="" y="">ch.hegarc.ig.sda.business.Bot</node>
+            <node x="" y="">ch.hegarc.ig.sda.app.PostTalkHashSet</node>
+            <node x="" y="">ch.hegarc.ig.sda.app.PostTalkLinkedList</node>
+            <node x="" y="">ch.hegarc.ig.sda.app.AbstractPostTalk</node>
+            <node x="" y="">ch.hegarc.ig.sda.business.Utilisateur</node>
+            <node x="" y="">ch.hegarc.ig.sda.business.Conversation</node>
+            <node x="" y="">ch.hegarc.ig.sda.business.Conversation.Message</node>
+            <node x="" y="">ch.hegarc.ig.sda.loader.AbstractLoader</node>
+            <node x="" y="">ch.hegarc.ig.sda.loader.LoaderLinkedList</node>
+            <node x="" y="">ch.hegarc.ig.sda.app.PostTalk</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="742.0" y="1496.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+            <Category>Constructors</Category>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/LoaderLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="255">
           <caret line="19" column="125" selection-start-line="19" selection-start-column="125" selection-end-line="19" selection-end-column="125" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -600,49 +539,122 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkHashSet.java">
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="60" selection-start-line="60" selection-end-line="63" selection-end-column="5" />
+        <state relative-caret-position="206">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#get#0;class#PostTalkHashSet#0" />
-            <element signature="method#get#1;class#PostTalkHashSet#0" />
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1087#1088#0" expanded="true" />
-            <element signature="e#1142#1143#0" expanded="true" />
-            <element signature="e#1188#1189#0" expanded="true" />
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1325#1326#0" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1383#1384#0" expanded="true" />
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#2837#2838#0" expanded="true" />
-            <element signature="e#2901#2902#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/AbstractLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#loadUsers#0;class#AbstractLoader#0" />
-            <element signature="method#loadMessagesSingleUser#0;class#AbstractLoader#0" />
-            <element signature="method#loadMessages#0;class#AbstractLoader#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/AbstractPostTalk.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+        <state relative-caret-position="1309">
+          <caret line="81" column="25" selection-start-line="81" selection-start-column="25" selection-end-line="81" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Conversation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#PostTalkLinkedList#0;class#PostTalkLinkedList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/app/PostTalkHashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#PostTalkHashSet#0;class#PostTalkHashSet#0" />
+            <element signature="method#get#0;class#PostTalkHashSet#0" />
+            <element signature="e#1263#1264#0" expanded="true" />
+            <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="method#testTempsRemoveUtilisateur#0;class#PostTalkHashSet#0" />
+            <element signature="method#addMessage#0;class#PostTalkHashSet#0" />
+            <element signature="method#loadMessagesSingleUser#0;class#PostTalkHashSet#0" />
+            <element signature="method#testTempsChargementUsersCSV#0;class#PostTalkHashSet#0" />
+            <element signature="method#affichageNbUtilisateursFinaux#0;class#PostTalkHashSet#0" />
+            <element signature="method#testempsAjoutNMessages#0;class#PostTalkHashSet#0" />
+            <element signature="method#testTempsAfficherConversation#0;class#PostTalkHashSet#0" />
+            <element signature="method#testTailleListeUtilisateur#0;class#PostTalkHashSet#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/AbstractLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="95" column="32" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#loadMessagesSingleUser#0;class#AbstractLoader#0" />
+            <element signature="method#loadMessages#0;class#AbstractLoader#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/loader/LoaderHashSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Bot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Participant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ch/hegarc/ig/sda/business/Utilisateur.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="64" column="69" selection-start-line="64" selection-start-column="69" selection-end-line="64" selection-end-column="69" />
+          <folding>
+            <element signature="method#Utilisateur#0;class#Utilisateur#0" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
           </folding>
         </state>
       </provider>
