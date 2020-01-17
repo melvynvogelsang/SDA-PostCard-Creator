@@ -12,15 +12,16 @@ public interface PostTalk {
     void createUtilisateurs();
     void loadUtilisateurs();
     void addUtilisateur(Utilisateur utilisateurAAjouter);
+    void testTempsGetUser();
     void removeUtilisateur(Utilisateur utilisateur);
-    void testTempsRemoveUtilisateur(long elapsedTimeRemove);
+    void testTempsRemoveUtilisateur(long elapsedTime);
     void loadMessages(Bot bot);
     void addMessage(Utilisateur utilisateur, LocalDateTime dateAAjouter);
     void loadMessagesSingleUser(Utilisateur utilisateur,Bot bot);
-    void testTempsChargementUsersCSV(long elapsedTimeUsers);
+    void testTempsChargementUsersCSV(long elapsedTime);
     void affichageNbUtilisateursFinaux();
     void testTailleListeUtilisateur(Utilisateur utilisateur);
-    void testempsAjoutNMessages(Utilisateur utilisateur, long elapsedTimeAjoutNMessages);
+    void testempsAjoutNMessages(Utilisateur utilisateur, long elapsedTime);
     void afficherConversation(String id);
-    void testTempsAfficherConversation(long elapsedTimeAffichageConversation);
+    void testTempsAfficherConversation(long elapsedTime);
 }

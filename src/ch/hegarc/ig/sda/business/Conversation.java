@@ -8,8 +8,6 @@ public class Conversation {
 
     private static final String DATE_FORMATTER= "dd MMMM yyyy à HH:mm";
     private Deque<Message> messages;
-    private Participant utilisateur;
-    private Participant bot;
 
     public Conversation() {
         this.messages = new LinkedList<>();

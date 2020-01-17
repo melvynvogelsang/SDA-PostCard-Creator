@@ -8,7 +8,6 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
-
 public class PostTalkHashSet extends AbstractPostTalk {
 
     private Set<Utilisateur> utilisateurs = null;
@@ -18,11 +17,13 @@ public class PostTalkHashSet extends AbstractPostTalk {
 
     }
 
+    // On crée nos propres méthodes get
     public Utilisateur get(Utilisateur utilisateur){
     Utilisateur tmpUtilisateur = null;
     for (Utilisateur user : utilisateurs){
         if (user.equals(utilisateur)){
         tmpUtilisateur = user;
+        break;
         }
     }
         return tmpUtilisateur;
@@ -33,6 +34,7 @@ public class PostTalkHashSet extends AbstractPostTalk {
         for (Utilisateur user : utilisateurs){
             if (user.getId().equals(id)){
                 tmpUtilisateur = user;
+                break;
             }
         }
         return tmpUtilisateur;
@@ -56,6 +58,16 @@ public class PostTalkHashSet extends AbstractPostTalk {
     @Override
     public void removeUtilisateur(Utilisateur utilisateur) {
         utilisateurs.remove(utilisateur);
+    }
+
+    @Override
+    public void testTempsGetUser() {
+        // Temps de récupération d'un utilisateur
+        long startTimeGetUtilisateur = System.currentTimeMillis();
+        get("150000");
+        long endTimeGetUtilisateur = System.currentTimeMillis();
+        long elapsedTimeGetUtilisateur = endTimeGetUtilisateur - startTimeGetUtilisateur;
+        System.out.println("Temps de récupération d'un utilisateur : " + elapsedTimeGetUtilisateur + "ms");
     }
 
     @Override

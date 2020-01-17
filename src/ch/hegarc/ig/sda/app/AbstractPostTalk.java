@@ -6,7 +6,6 @@ import ch.hegarc.ig.sda.business.Utilisateur;
 
 import java.time.LocalDateTime;
 
-
 public abstract class AbstractPostTalk implements PostTalk {
 
     static final int NB_MESSAGES_AJOUTES = 21;
@@ -14,8 +13,13 @@ public abstract class AbstractPostTalk implements PostTalk {
 
     @Override
     public void run() {
+        // Création d'un utilisateur que l'on utilisera durant le programme
         Participant utilisateur = new Utilisateur("300001","Melvyn","Vogelsang","melvyn.vogelsang@he-arc.ch");
+
+        // Création du bot
         Bot bot = new Bot("Pascal le Bot");
+
+        // Création d'une date pour l'utiliser lors d'ajout de messages
         LocalDateTime newDate = LocalDateTime.now();
 
         createUtilisateurs();
@@ -26,7 +30,7 @@ public abstract class AbstractPostTalk implements PostTalk {
         long endTimeUsers = System.currentTimeMillis();
         long elapsedTimeUsers = endTimeUsers - startTimeUsers;
 
-        // Temps de chargement d'un ajout d'un seul utilisateur
+        // Temps d'ajout d'un seul utilisateur
         long startTimeAjoutUser = System.currentTimeMillis();
         addUtilisateur((Utilisateur) utilisateur);
         long endTimeAjoutUser = System.currentTimeMillis();
@@ -38,20 +42,20 @@ public abstract class AbstractPostTalk implements PostTalk {
         long endTimeMessages = System.currentTimeMillis();
         long elapsedTimeMessages = endTimeMessages - startTimeMessages;
 
-        // Temps de chargement d'un ajout d'un seul message
+        // Temps d'ajout d'un seul message
         long startTimeAjoutMessage = System.currentTimeMillis();
         addMessage((Utilisateur) utilisateur,newDate);
         long endTimeAjoutMessage = System.currentTimeMillis();
         long elapsedTimeAjoutMessage = endTimeAjoutMessage - startTimeAjoutMessage;
 
-
-        // Temps d'ajout de n messages
+        // Temps d'ajout de n messages à un utilisatuer
         long startTimeAjoutNMessages = System.currentTimeMillis();
         loadMessagesSingleUser((Utilisateur) utilisateur,bot);
         long endTimeAjoutNMessages = System.currentTimeMillis();
         long elapsedTimeAjoutNMessages = endTimeAjoutNMessages - startTimeAjoutNMessages;
 
-
+        // Affichage des temps
+        testTempsGetUser();
         testTempsChargementUsersCSV(elapsedTimeUsers);
         System.out.println("Temps de chargement de 600000 messages depuis CSV : " + elapsedTimeMessages + "ms");
         System.out.println("Temps total du chargement des données depuis CSV : " + (elapsedTimeMessages + elapsedTimeUsers) + "ms");
@@ -69,7 +73,7 @@ public abstract class AbstractPostTalk implements PostTalk {
         long elapsedTimeAfficherConversation = endTimeAfficherConversation - startTimeAfficherConversation;
         testTempsAfficherConversation(elapsedTimeAfficherConversation);
 
-        // Temps d'affichage d'une conversation
+        // Temps de suppression d'un utilisateur
         long startTimeSupprimerUtilisateur = System.currentTimeMillis();
         removeUtilisateur((Utilisateur) utilisateur);
         long endTimeSupprimerUtilisateur = System.currentTimeMillis();
@@ -78,13 +82,15 @@ public abstract class AbstractPostTalk implements PostTalk {
         affichageNbUtilisateursFinaux();
     }
 
+    // Méthodes abstraites, les enfants doivent les redéfinir
+    public abstract Utilisateur get(String id);
     public abstract void createUtilisateurs();
     public abstract void loadUtilisateurs();
-    public abstract void addUtilisateur(Utilisateur utilisateurAAjouter);
+    public abstract void addUtilisateur(Utilisateur utilisateur);
     public abstract void removeUtilisateur(Utilisateur utilisateur);
     public abstract void testTempsRemoveUtilisateur(long elapsedTimeRemove);
     public abstract void loadMessages(Bot bot);
-    public abstract void addMessage(Utilisateur utilisateur, LocalDateTime dateAAjouter);
+    public abstract void addMessage(Utilisateur utilisateur, LocalDateTime date);
     public abstract void loadMessagesSingleUser(Utilisateur utilisateur,Bot bot);
     public abstract void testTempsChargementUsersCSV(long elapsedTimeUsers);
     public abstract void affichageNbUtilisateursFinaux();

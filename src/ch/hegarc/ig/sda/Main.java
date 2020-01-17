@@ -4,13 +4,13 @@ import ch.hegarc.ig.sda.app.AbstractPostTalk;
 import ch.hegarc.ig.sda.app.PostTalkHashSet;
 import ch.hegarc.ig.sda.app.PostTalkLinkedList;
 
-
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         AbstractPostTalk testHashSet = new PostTalkHashSet();
         AbstractPostTalk testLinkedList = new PostTalkLinkedList();
+
         System.out.println();
         System.out.println("-----------------------------");
         System.out.println("---------- HashSet ----------");

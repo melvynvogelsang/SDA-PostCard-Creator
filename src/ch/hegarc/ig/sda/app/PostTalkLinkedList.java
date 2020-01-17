@@ -45,6 +45,16 @@ public class PostTalkLinkedList extends AbstractPostTalk {
     }
 
     @Override
+    public void testTempsGetUser() {
+        // Temps de récupération d'un utilisateur
+        long startTimeGetUtilisateur = System.currentTimeMillis();
+        utilisateurs.get(150000);
+        long endTimeGetUtilisateur = System.currentTimeMillis();
+        long elapsedTimeGetUtilisateur = endTimeGetUtilisateur - startTimeGetUtilisateur;
+        System.out.println("Temps de récupération d'un utilisateur : " + elapsedTimeGetUtilisateur + "ms");
+    }
+
+    @Override
     public void testempsAjoutNMessages(Utilisateur utilisateurAAjouter, long elapsedTimeAjoutNMessages) {
         int indexUtilisateur = utilisateurs.indexOf(utilisateurAAjouter);
         System.out.println("Temps d'ajout de " + (utilisateurs.get(indexUtilisateur).getConversation().getMessages().size() - NB_MESSAGES_AJOUTES )+ " messages : " + elapsedTimeAjoutNMessages + "ms"); // - 21 car 21 messages ont été chargés dans le programme
