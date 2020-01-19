@@ -8,22 +8,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        AbstractPostTalk testHashSet = new PostTalkHashSet();
-        AbstractPostTalk testLinkedList = new PostTalkLinkedList();
+        AbstractPostTalk postTalkHashSet = new PostTalkHashSet();
+        AbstractPostTalk postTalkLinkedList = new PostTalkLinkedList();
 
         System.out.println();
         System.out.println("-----------------------------");
         System.out.println("---------- HashSet ----------");
         System.out.println("-----------------------------");
         System.out.println();
-        testHashSet.run();
+        postTalkHashSet.run();
 
         System.out.println();
         System.out.println("----------------------------");
         System.out.println("-------- LinkedList --------");
         System.out.println("----------------------------");
         System.out.println();
-        testLinkedList.run();
+        postTalkLinkedList.run();
 
     }
 }

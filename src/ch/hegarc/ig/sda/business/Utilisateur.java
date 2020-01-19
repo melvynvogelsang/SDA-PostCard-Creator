@@ -18,7 +18,7 @@ public class Utilisateur extends Participant {
     }
 
     public Conversation getConversation() {
-        return conversation;
+        return conversation; // O(1)
     }
 
     public void setConversation(Conversation p_conversation) {

@@ -18,13 +18,13 @@ public class PostTalkLinkedList extends AbstractPostTalk {
     }
 
     public Utilisateur get(String id){
-        Utilisateur tmpUtilisateur = null;
-        for (Utilisateur user : utilisateurs){
-            if(user.getId().equals(id)){
-                tmpUtilisateur = user;
+        Utilisateur tmpUtilisateur = null; // O(1) car affectation
+        for (Utilisateur user : utilisateurs){ // O(n) car itérations sur n objets
+            if(user.getId().equals(id)){ // O(n-1) car comparaison de n-1 objets
+                tmpUtilisateur = user; // O(1) car affectation
             }
         }
-        return tmpUtilisateur;
+        return tmpUtilisateur; // O(1)
     }
 
     @Override
@@ -63,12 +63,12 @@ public class PostTalkLinkedList extends AbstractPostTalk {
 
     @Override
     public void addUtilisateur(Utilisateur utilisateurAAjouter) {
-        utilisateurs.add(utilisateurAAjouter);
+        utilisateurs.add(utilisateurAAjouter); // O(1)
     }
 
     @Override
     public void removeUtilisateur(Utilisateur utilisateur) {
-        utilisateurs.remove(utilisateur);
+        utilisateurs.remove(utilisateur); // O(1)
     }
 
     @Override

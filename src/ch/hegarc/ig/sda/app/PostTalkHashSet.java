@@ -13,31 +13,32 @@ public class PostTalkHashSet extends AbstractPostTalk {
     private Set<Utilisateur> utilisateurs = null;
     private AbstractLoader loader = new LoaderHashSet();
 
+
     public PostTalkHashSet() {
 
     }
 
     // On crée nos propres méthodes get
     public Utilisateur get(Utilisateur utilisateur){
-    Utilisateur tmpUtilisateur = null;
-    for (Utilisateur user : utilisateurs){
-        if (user.equals(utilisateur)){
-        tmpUtilisateur = user;
-        break;
+    Utilisateur tmpUtilisateur = null; // O(1) car initialisation et affectation
+    for (Utilisateur user : utilisateurs){ // O(n) car itérations sur n objets
+        if (user.equals(utilisateur)){ //  O(n-1) car comparaisons de n-1 objets
+            tmpUtilisateur = user; // O(1) car affectation
+            break;
         }
     }
-        return tmpUtilisateur;
+        return tmpUtilisateur; // O(1)
     }
 
     public Utilisateur get(String id){
-        Utilisateur tmpUtilisateur = null;
-        for (Utilisateur user : utilisateurs){
-            if (user.getId().equals(id)){
-                tmpUtilisateur = user;
+        Utilisateur tmpUtilisateur = null; // O(1) car initialisation et affectation
+        for (Utilisateur user : utilisateurs){ // O(n) car itérations sur n objets
+            if (user.getId().equals(id)){ //  O(n-1) car comparaisons de n-1 objets
+                tmpUtilisateur = user; // O(1) car affectation
                 break;
             }
         }
-        return tmpUtilisateur;
+        return tmpUtilisateur; // O(1)
         }
 
     @Override
@@ -52,12 +53,12 @@ public class PostTalkHashSet extends AbstractPostTalk {
 
     @Override
     public void addUtilisateur(Utilisateur utilisateurAAjouter) {
-        utilisateurs.add(utilisateurAAjouter);
+        utilisateurs.add(utilisateurAAjouter); // O(1)
     }
 
     @Override
     public void removeUtilisateur(Utilisateur utilisateur) {
-        utilisateurs.remove(utilisateur);
+        utilisateurs.remove(utilisateur); // O(1)
     }
 
     @Override

@@ -14,8 +14,8 @@ public class Conversation {
     }
 
     public void addMessage(String texte, LocalDateTime date, Participant envoyeur){
-        Message newMessage = new Message(texte,date,envoyeur);
-        messages.addLast(newMessage);
+        Message newMessage = new Message(texte,date,envoyeur); // O(1)
+        messages.addLast(newMessage); // O(1)
     }
 
     public void afficherConversation(){

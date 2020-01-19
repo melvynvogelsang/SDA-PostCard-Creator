@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SDA-PostCard-Creator.iml" filepath="$PROJECT_DIR$/SDA-PostCard-Creator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SDA-PostTalk.iml" filepath="$PROJECT_DIR$/SDA-PostTalk.iml" />
     </modules>
   </component>
 </project>
